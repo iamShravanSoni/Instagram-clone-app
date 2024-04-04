@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./stylesheets/profile.css">
+</head>
+<body>
+  <div class="container">
+    <section class="top-bar">
+      <button class="top-bar__back-btn"><i class="material-icons"><%= user.username %></i></button>
+      <div class="top-bar__title">        
+        <h1 class="top-bar__title__text"><a href="/home">instagram</a></h1>
+        <img class='top-bar__title__verified-icon' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/kisspng-social-media-instagram-verified-badge-symbol-compu-5b1eedb5aba638.1612204615287535897031.jpg" alt="verified-icon"></div>
+      <button class="top-bar__menu-btn"><i class="material-icons"><%= user.username %></i></button>
+    </section>
+    <section class="stats">
+      <div class="stats__img-holder" style="background-image: url('/images/uploads/<%= user.profileimage %>');">      
+      </div>
+      <div class="stats__data">
+        <div class="stats__data__point">
+          
+          <div class="stats__data__point__value">6,126</div>
+          <div class="stats__data__point__description">Posts</div>
+        </div>
+        <div class="stats__data__point">
+          <div class="stats__data__point__value">317 M</div>
+          <div class="stats__data__point__description">Followers</div>
+        </div>
+        <div class="stats__data__point">
+          <div class="stats__data__point__value">225</div>
+          <div class="stats__data__point__description">Following</div>
+        </div>
+      </div>      
+    </section>
+    <section class="description">
+      <h2 class="decription__title"><%= user.firstname %><%= user.lastname %></h2>
+      <p>
+        <%= user.bio %> ❤️
+      </p>
+    </section>
+    <section class="actions">
+      <button class="actions__btn actions__btn--active" ><a href="/edit">Edit profile</a></button>
+      <button class="actions__btn"><a href="/logout">Logout</a></button>
+      <button class="actions__btn actions__btn--icon"><i class="material-icons"></i></button>
+    </section>
+    <section class="stories">
+      <div class="stories__single">
+        <div class="stories__single__img-holder">
+          <div class="stories__single__img-holder__inner" style="background-image: url('https://images.unsplash.com/photo-1431512284068-4c4002298068?ixlib=rb-1.2.1&dpr=1&auto=format&fit=crop&w=416&h=312&q=60');"></div>
+        </div>
+        <p class="stories__single__description">Game On</p>
+      </div>
+      <div class="stories__single">
+        <div class="stories__single__img-holder">
+          <div class="stories__single__img-holder__inner" style="background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></div>
+        </div>
+        <p class="stories__single__description">Take a Stand</p>
+      </div>
+      <div class="stories__single">
+        <div class="stories__single__img-holder">
+          <div class="stories__single__img-holder__inner" style="background-image: url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></div>
+        </div>
+        <p class="stories__single__description">You got this</p>
+      </div>
+          <div class="stories__single">
+        <div class="stories__single__img-holder">
+          <div class="stories__single__img-holder__inner" style="background-image: url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></div>
+        </div>
+        <p class="stories__single__description">#skater girl</p>
+      </div>
+        <div class="stories__single">
+        <div class="stories__single__img-holder">
+          <div class="stories__single__img-holder__inner" style="background-image: url('https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></div>
+        </div>
+        <p class="stories__single__description">Game On</p>
+      </div>
+      <div class="stories__single">
+        <div class="stories__single__img-holder">
+          <div class="stories__single__img-holder__inner" style="background-image: url('https://images.unsplash.com/photo-1504700610630-ac6aba3536d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></div>
+        </div>
+        <p class="stories__single__description">Take a Stand</p>
+      </div>
+      <div class="stories__single">
+        <div class="stories__single__img-holder">
+          <div class="stories__single__img-holder__inner" style="background-image: url('https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></div>
+        </div>
+        <p class="stories__single__description">You got this</p>
+      </div>
+          <div class="stories__single">
+        <div class="stories__single__img-holder">
+          <div class="stories__single__img-holder__inner" style="background-image: url('https://images.unsplash.com/photo-1518144591331-17a5dd71c477?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></div>
+        </div>
+        <p class="stories__single__description">#skater girl</p>
+      </div>
+    </section>
+    <section class="tabs">
+      <button class="tabs__btn tabs__btn--active">
+        <img class='tabs__btn__icon' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/grid-icon.png" alt="grid icon">
+      </button>
+      <button class="tabs__btn">
+        <img class='tabs__btn__icon' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/igtv-icon.png" alt="igtv icon">
+      </button>
+      <button class="tabs__btn">
+        <img class='tabs__btn__icon' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/smile-icon.png" alt="smile icon">
+      </button>
+      <button class="tabs__btn">
+        <img class='tabs__btn__icon' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/tagged-icon.png" alt="tagged icon">
+      </button>
+    </section>
+    <section class="grid">
+      <% user.posts.reverse().forEach(function(post){ %> 
+        <a href="" class="grid__photo" style="background-image: url('/images/uploads/<%= post.picture %>');"></a>
+      <% }) %> 
+    </section>
+    <% include navbar.ejs %>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Edit Profile</title>
+  <link rel="stylesheet" href="./stylesheets/edit.css">
+</head>
+<body>
+
+<div id="edit-container">
+  <div id="profile-image-container">
+    <label for="image-input">
+      <img id="profile-image" src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" alt="Profile Image">
+      <div id="change-image">Change Profile Photo</div>
+    </label>
+  </div>
+
+  <form action="/edituploads" method="post" enctype="multipart/form-data">
+    <input type="file" id="image-input" name="avatar" style="display: none">
+    <input type="text" id="username" name="username" placeholder="Username" value="<%= user.username %>">
+    <input type="text" id="fullname" name="fullname" placeholder="Fullname" value="<%= user.firstname %>">
+    <input type="text" id="fullname" name="lastname" placeholder="Lastname" value="<%= user.lastname %>">
+    <textarea id="bio" name="bio" placeholder="Your bio goes here"><%= user.bio %></textarea>
+
+    <input type="submit" value="Save Changes" id="save-button" name="submit">
+  </form>
+</div>
+<% include navbar.ejs %>
+<script>
+  // Image preview functionality
+  const imageInput = document.getElementById('image-input');
+  const profileImage = document.getElementById('profile-image');
+
+  imageInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        profileImage.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+
+</body>
+</html>

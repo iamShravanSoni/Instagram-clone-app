@@ -1,0 +1,78 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#postForm {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+#photoContainer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#selectedPhoto {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#selectPhotoButton {
+    background-color: #3897f0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#imageInput {
+    display: none;
+}
+
+#captionInput {
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#postButton {
+    background-color: #3897f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
